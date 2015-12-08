@@ -25,7 +25,11 @@
   <div class="wrap">
     <div id="feed-of-events"></div>
     <script>
-    $('#feed-of-events').chapmanEventsFeed({url: 'http://events.ngrok.io/', feed: true, featured: true, per: 5})
+      $('#feed-of-events').chapmanEventsFeed({
+        url: 'http://events.chapman.edu/', 
+        featured: false, 
+        per: 8
+      });
     </script>
   </div>
 </body>

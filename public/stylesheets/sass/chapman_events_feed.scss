@@ -25,22 +25,20 @@ $cef_body-font: "proxima-nova-soft", "Helvetica Neue", "Microsoft Sans Serif", s
   .day-divider { display: none; }
   .pagination  { display: none; }
 
-  .featured-column {
-    @media(min-width: $cef_small_screen) {
-      float: left;
-      width: 60%;
-    }
+  &.contains-featured.contains-feed {
+    .featured-column {
+      @media(min-width: $cef_small_screen) {
+        float: left;
+        width: 60%;
+      }
 
-  }
-  .feed-column {
-    @media(min-width: $cef_small_screen) {
-      float: right;
-      width: 35%;
     }
-  }
-  .feed-title {
-    font-weight: 100;
-    font-size: 24px;
+    .feed-column {
+      @media(min-width: $cef_small_screen) {
+        float: right;
+        width: 35%;
+      }
+    }
   }
 
   .browse-link {
