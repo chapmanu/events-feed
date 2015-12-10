@@ -31,7 +31,6 @@ $cef_body-font: "proxima-nova-soft", "Helvetica Neue", "Microsoft Sans Serif", s
         float: left;
         width: 60%;
       }
-
     }
     .feed-column {
       @media(min-width: $cef_small_screen) {
@@ -169,7 +168,11 @@ $cef_body-font: "proxima-nova-soft", "Helvetica Neue", "Microsoft Sans Serif", s
   a { color: $cef_black; }
   .photo {
     width: 100%;
-    height: auto;
+    height: 300px;
+    display: block;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center top;
   }
 
   .primary-event-info {
@@ -177,7 +180,7 @@ $cef_body-font: "proxima-nova-soft", "Helvetica Neue", "Microsoft Sans Serif", s
     position: relative;
     padding: 16px 0;
     background: white;
-    min-height: 123px;
+    min-height: 155px;
   }
 
   .calendar-card {

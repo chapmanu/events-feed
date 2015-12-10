@@ -88,7 +88,7 @@
   };
 
   ChapmanEventsFeed.prototype.onFeaturedSuccess = function(data) {
-    this.$element.prepend('<div class="featured-column">' + data + '</div>');                          
+    this.$element.append('<div class="featured-column">' + data + '</div>');                          
   };
 
   ChapmanEventsFeed.prototype.onFeaturedError = function(message) {
