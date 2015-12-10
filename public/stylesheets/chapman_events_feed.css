@@ -24,7 +24,7 @@
 .chapman-event-card {
   font-family: "proxima-nova-soft", "Helvetica Neue", "Microsoft Sans Serif", sans-serif;
   color: #353430;
-  margin: 12px 0;
+  margin: 0 0 12px 0;
   position: relative;
   background-color: white;
   transition: transform 100ms;
@@ -203,5 +203,10 @@
     padding: 6px 0 16px 0;
     font-size: 12px;
     font-weight: 100; }
+
+/* Animations when it is loading */
+.chapman-events-feed-loading {
+  opacity: 0;
+  transition: all 1s; }
 
 /*# sourceMappingURL=chapman_events_feed.css.map */

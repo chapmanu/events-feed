@@ -74,6 +74,7 @@
    * The callback for when feed ajax was a success
    */
   ChapmanEventsFeed.prototype.onFeedSuccess = function(data) {
+    this.$element.addClass('contains-feed');
     this.$element.append('<div class="feed-column">' +
                               data +
                             '<a class="browse-link" href="'+this.url+'">View all at events.chapman.edu &raquo;</a> \
@@ -88,7 +89,10 @@
   };
 
   ChapmanEventsFeed.prototype.onFeaturedSuccess = function(data) {
-    this.$element.append('<div class="featured-column">' + data + '</div>');                          
+    if (data.length) {
+      this.$element.addClass('contains-featured'); 
+      this.$element.append('<div class="featured-column">' + data + '</div>');
+    }                       
   };
 
   ChapmanEventsFeed.prototype.onFeaturedError = function(message) {
@@ -104,14 +108,8 @@
   $.fn.chapmanEventsFeed = function(options) {
     options.$element = this;
     this.cef = new ChapmanEventsFeed(options);
-    if (this.cef.feed) { 
-      this.cef.fetchFeed();
-      this.addClass('contains-feed');
-    }
-    if (this.cef.featured) {
-      this.cef.fetchFeatured();
-      this.addClass('contains-featured');
-    }
+    if (this.cef.feed)     { this.cef.fetchFeed(); }
+    if (this.cef.featured) { this.cef.fetchFeatured(); }
     this.addClass('chapman-events-feed');
     return this;
   };
